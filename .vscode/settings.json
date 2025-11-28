@@ -1,0 +1,104 @@
+{
+  // ============================================
+  // Java 和 Gradle 基础配置
+  // ============================================
+  
+  // 自动更新构建配置
+  "java.configuration.updateBuildConfiguration": "automatic",
+  
+  // 启用 Gradle 导入
+  "java.import.gradle.enabled": true,
+  
+  // 启用 Gradle Wrapper
+  "java.import.gradle.wrapper.enabled": true,
+  
+  // 自动刷新 Gradle 项目（当 build.gradle 改变时）
+  "java.import.gradle.offline.enabled": false,
+  
+  // ============================================
+  // Gradle 插件配置
+  // ============================================
+  
+  // 启用 Gradle 任务视图
+  "gradle.nestedProjects": true,
+  
+  // 自动检测 Gradle 项目
+  "gradle.autoDetect": "on",
+  
+  // 显示所有 Gradle 任务（包括隐藏任务）
+  "gradle.showAllTasks": false,
+  
+  // ============================================
+  // 编译和构建配置
+  // ============================================
+  
+  // 编译配置
+  "java.compile.nullAnalysis.mode": "automatic",
+  
+  // 自动保存时编译
+  "java.autobuild.enabled": true,
+  
+  // 增量编译
+  "java.maxConcurrentBuilds": 1,
+  
+  // ============================================
+  // 项目识别配置
+  // ============================================
+  
+  // 识别多个 Gradle 项目
+  // 如果工作区有多个独立的 Gradle 项目，VSCode 会自动识别
+  "java.project.referencedLibraries": [
+    "**/*.jar"
+  ],
+  
+  // 指定 Java 主目录（如果需要）
+  "java.import.gradle.java.home": null,
+  
+  // 指定 Gradle 版本（如果使用特定版本）
+  "java.import.gradle.version": null,
+  
+  // ============================================
+  // 文件关联配置（帮助 VSCode 识别 Gradle 文件）
+  // ============================================
+  
+  // 让 VSCode 将 build.gradle 识别为 Groovy 文件
+  // 这样可以获得语法高亮和更好的代码提示
+  "files.associations": {
+    "build.gradle": "groovy",
+    "settings.gradle": "groovy",
+    "gradle.properties": "properties"
+  },
+  
+  // ============================================
+  // 文件排除配置
+  // ============================================
+  
+  // 多模块项目配置
+  // VSCode 会自动识别 settings.gradle 中定义的模块
+  "files.exclude": {
+    "**/.gradle": true,
+    "**/build": false  // 保留 build 目录以便查看编译输出
+  },
+  
+  // 搜索时排除的文件
+  "search.exclude": {
+    "**/build": true,
+    "**/.gradle": true,
+    "**/node_modules": true
+  },
+  
+  // ============================================
+  // 终端配置（用于运行 Gradle 命令）
+  // ============================================
+  
+  // 终端默认工作目录
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  
+  // ============================================
+  // 调试配置
+  // ============================================
+  
+  // Java 调试配置
+  "java.debug.settings.enableRunDebugCodeLens": true,
+  "java.debug.settings.hotCodeReplace": "auto"
+}
