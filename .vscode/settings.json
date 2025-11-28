@@ -58,6 +58,18 @@
   "java.import.gradle.version": null,
   
   // ============================================
+  // 文件关联配置（帮助 VSCode 识别 Gradle 文件）
+  // ============================================
+  
+  // 让 VSCode 将 build.gradle 识别为 Groovy 文件
+  // 这样可以获得语法高亮和更好的代码提示
+  "files.associations": {
+    "build.gradle": "groovy",
+    "settings.gradle": "groovy",
+    "gradle.properties": "properties"
+  },
+  
+  // ============================================
   // 文件排除配置
   // ============================================
   
